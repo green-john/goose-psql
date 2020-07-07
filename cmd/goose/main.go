@@ -6,7 +6,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/pressly/goose"
+	goose "github.com/afruizc/goose-psql"
 )
 
 var (

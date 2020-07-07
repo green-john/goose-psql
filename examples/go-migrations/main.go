@@ -7,7 +7,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/pressly/goose"
+	goose "github.com/afruizc/goose-psql"
 
 	_ "github.com/mattn/go-sqlite3"
 )
@@ -39,7 +39,7 @@ func main() {
 		}
 	}()
 
-	arguments := []string{}
+	var arguments []string
 	if len(args) > 3 {
 		arguments = append(arguments, args[3:]...)
 	}
