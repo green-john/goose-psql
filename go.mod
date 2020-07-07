@@ -1,6 +1,6 @@
-module github.com/pressly/goose
+module github.com/afruizc/goose-psql
 
-go 1.12
+go 1.14
 
 require (
 	github.com/lib/pq v1.0.0
