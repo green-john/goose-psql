@@ -59,7 +59,7 @@ func main() {
 
 	driver, dbstring, command := args[0], args[1], args[2]
 
-	db, err := goose.OpenDBWithDriver(driver, normalizeDBString(driver, dbstring, *certfile))
+	db, err := goose.OpenDBWithDriver(driver, dbstring)
 	if err != nil {
 		log.Fatalf("-dbstring=%q: %v\n", dbstring, err)
 	}
@@ -69,7 +69,7 @@ func main() {
 		}
 	}()
 
-	arguments := []string{}
+	var arguments []string
 	if len(args) > 3 {
 		arguments = append(arguments, args[3:]...)
 	}
@@ -142,8 +142,7 @@ Examples:
     GOOSE_DRIVER=mysql GOOSE_DBSTRING="user:password@/dbname" goose status
     GOOSE_DRIVER=redshift GOOSE_DBSTRING="postgres://user:password@qwerty.us-east-1.redshift.amazonaws.com:5439/db" goose status
 
-Options:
-`
+Options:`
 
 	usageCommands = `
 Commands:
@@ -157,6 +156,4 @@ Commands:
     status               Dump the migration status for the current DB
     version              Print the current version of the database
     create NAME [sql|go] Creates new migration file with the current timestamp
-    fix                  Apply sequential ordering to migrations
-`
-)
+    fix                  Apply sequential ordering to migrations`)
