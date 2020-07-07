@@ -1,4 +1,4 @@
-module github.com/afruizc/goose-psql
+module github.com/afruizc/goose
 
 go 1.14
 
