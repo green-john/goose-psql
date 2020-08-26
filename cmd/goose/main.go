@@ -9,7 +9,7 @@ import (
 	goose "github.com/green-john/goose-psql"
 )
 
-var zc
+var (
 	flags    = flag.NewFlagSet("goose", flag.ExitOnError)
 	dir      = flags.String("dir", ".", "directory with migration files")
 	table    = flags.String("table", "goose_db_version", "migrations table name")
