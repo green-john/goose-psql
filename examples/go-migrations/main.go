@@ -7,7 +7,7 @@ import (
 	"log"
 	"os"
 
-	goose "github.com/afruizc/goose-psql"
+	goose "github.com/green-john/goose-psql"
 
 	_ "github.com/mattn/go-sqlite3"
 )

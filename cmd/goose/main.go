@@ -6,10 +6,10 @@ import (
 	"log"
 	"os"
 
-	goose "github.com/afruizc/goose-psql"
+	goose "github.com/green-john/goose-psq"
 )
 
-var (
+var zc
 	flags    = flag.NewFlagSet("goose", flag.ExitOnError)
 	dir      = flags.String("dir", ".", "directory with migration files")
 	table    = flags.String("table", "goose_db_version", "migrations table name")
