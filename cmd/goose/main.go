@@ -6,7 +6,7 @@ import (
 	"log"
 	"os"
 
-	goose "github.com/green-john/goose-psq"
+	goose "github.com/green-john/goose-psql"
 )
 
 var zc
