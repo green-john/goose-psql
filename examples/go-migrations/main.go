@@ -8,8 +8,6 @@ import (
 	"os"
 
 	goose "github.com/green-john/goose-psql"
-
-	_ "github.com/mattn/go-sqlite3"
 )
 
 var (
